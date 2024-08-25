@@ -3,13 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import { CreateTodo} from './Components/CreateTodo'
+import { Todos } from './Components/Todos'
+
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [todos,useTodos] = useState([{"title":"Hello","description":"World","complete":true},{"title":"Hello","description":"World","complete":false}]);
 
   return (
     <>
-      <div>Hello</div>
-     
+        <CreateTodo></CreateTodo>
+        <Todos todos= {todos}  ></Todos>
     </>
   )
 }
